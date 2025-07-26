@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  background: #f9fafb;
+  color: #333;
+  padding: 20px;
+}
+h1, h2 {
+  margin-bottom: 16px;
+  color: #222;
+}
+header, footer {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #555;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.form-section, .list-section, .trash-section {
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 32px;
+}
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+input[type="text"],
+select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+input[type="text"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+button#addEmployeeBtn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+button#addEmployeeBtn:hover {
+  background-color: #0056b3;
+}
+.error-message {
+  color: #d93025;
+  font-size: 0.875rem;
+  margin-top: 4px;
+  min-height: 18px;
+}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.list-header p {
+  font-size: 1rem;
+  color: #555;
+}
+#toggleTrashBtn {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+#toggleTrashBtn[aria-pressed="true"] {
+  background-color: #dc3545;
+}
+#toggleTrashBtn:hover {
+  opacity: 0.9;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+caption {
+  caption-side: top;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+thead th {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+}
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tbody td {
+  padding: 12px 8px;
+  vertical-align: middle;
+}
+.status-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  display: inline-block;
+  font-size: 0.875rem;
+  text-align: center;
+  min-width: 90px;
+}
+.status-Active {
+  background-color: #28a745;
+}
+.status-On\ Leave {
+  background-color: #ffc107;
+  color: #212529;
+}
+.status-Terminated {
+  background-color: #dc3545;
+}
+.action-btn {
+  margin-right: 8px;
+  padding: 6px 10px;
+  font-size: 0.875rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.edit-btn {
+  background-color: #17a2b8;
+}
+.edit-btn:hover {
+  background-color: #117a8b;
+}
+.delete-btn {
+  background-color: #dc3545;
+}
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+.restore-btn {
+  background-color: #28a745;
+}
+.restore-btn:hover {
+  background-color: #1c7430;
+}
+.perm-delete-btn {
+  background-color: #6c757d;
+}
+.perm-delete-btn:hover {
+  background-color: #495057;
+}
+.hidden {
+  display: none !important;
+}
+@media (max-width: 600px) {
+  .list-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .list-header p {
+    margin-top: 8px;
+  }
+  tbody td, thead th {
+    padding: 10px 4px;
+  }
+}

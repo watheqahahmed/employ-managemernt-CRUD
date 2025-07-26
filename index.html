@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Employee Management Dashboard</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Employee Management Dashboard</h1>
+  </header>
+  <main>
+    <section class="form-section" aria-label="Add Employee Form">
+      <form id="employeeForm" novalidate>
+        <div class="form-group">
+          <label for="name">Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Enter employee name" required />
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+        <div class="form-group">
+          <label for="role">Role <span aria-hidden="true">*</span></label>
+          <input type="text" id="role" name="role" placeholder="Enter employee role" required />
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+        <div class="form-group">
+          <label for="status">Status <span aria-hidden="true">*</span></label>
+          <select id="status" name="status" required>
+            <option value="">--Select Status--</option>
+            <option value="Active">Active</option>
+            <option value="On Leave">On Leave</option>
+            <option value="Terminated">Terminated</option>
+          </select>
+          <small class="error-message" aria-live="polite"></small>
+        </div>
+        <button type="submit" id="addEmployeeBtn">Add Employee</button>
+      </form>
+    </section>
+
+    <section class="list-section" aria-label="Employee List">
+      <div class="list-header">
+        <h2>Employees</h2>
+        <button id="toggleTrashBtn" aria-pressed="false" aria-controls="trashSection">Show Trash</button>
+        <p>
+          Active Employees: <span id="activeCount">0</span> | Trash: <span id="trashCount">0</span>
+        </p>
+      </div>
+      <table id="employeeTable" aria-describedby="employeeListDesc">
+        <caption id="employeeListDesc">List of active employees</caption>
+        <thead>
+          <tr>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Active employees here -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="trash-section hidden" id="trashSection" aria-label="Trash Bin">
+      <h2>Trash Bin</h2>
+      <table id="trashTable" aria-describedby="trashListDesc">
+        <caption id="trashListDesc">List of deleted employees</caption>
+        <thead>
+          <tr>
+            <th scope="col">Employee Name</th>
+            <th scope="col">Role</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Trash employees here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Employee Management System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
